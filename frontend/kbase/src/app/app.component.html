@@ -1,8 +1,20 @@
-<div class="searchpanel">
-  <input type="text" placeholder="name" [(ngModel)]="searchtext">
-  <button class="btn" (click)="search()">Search</button>
-</div>
+<p>
+  <mat-toolbar class="toolbar">
+    <span>Kbase</span>
+    <span class="example-spacer"></span>
+    <div class="toolbar-item">
+      <a href="/"><button>Search page</button></a>
+    </div>
+    <div class="toolbar-item">
+      <a href="add"><button>Add new item</button></a>
+    </div>
+  </mat-toolbar>
+</p>
 
-<div class="item" *ngFor="let item of items">
-  <p>{{item.title}}</p>
+<div class="container">
+  <div class="card">
+
+    <router-outlet></router-outlet>
+
+  </div>
 </div>

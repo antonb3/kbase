@@ -1,0 +1,12 @@
+.searchpanel {
+  border: 2px;
+  width: 700px;
+  padding: 20px;
+  margin-top: 10px;
+}
+.item {
+  border: dashed 1px;
+  width: 700px;
+  padding: 10px;
+  margin-top: 10px;
+}

@@ -1,0 +1,9 @@
+<div class="searchpanel">
+  <input type="text" placeholder="name" [(ngModel)]="searchtext">
+  <button class="btn" (click)="search()">Search</button>
+</div>
+
+<div class="item" *ngFor="let item of items">
+  <p><strong>{{item.title}}</strong></p>
+  <p>{{item.text}}</p>
+</div>

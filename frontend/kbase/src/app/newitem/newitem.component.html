@@ -1,0 +1,18 @@
+<p><strong>Add new item</strong></p>
+<div class="item-full">
+  <div>
+    <label>Title</label>
+  </div>
+  <div>
+    <input placeholder="title..." [(ngModel)]="itemTitle">
+  </div>
+  <div>
+    <label>Text</label>
+  </div>
+  <div>
+    <textarea placeholder="text..." [(ngModel)]="itemText"></textarea>
+  </div>
+  <div>
+    <button (click)="add()">Add</button>
+  </div>
+</div>

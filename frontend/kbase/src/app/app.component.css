@@ -1,12 +1,13 @@
-.searchpanel {
-  border: 2px;
-  width: 700px;
-  padding: 20px;
-  margin-top: 10px;
+.example-spacer {
+  flex: 1 1 auto;
 }
-.item {
-  border: dashed 1px;
-  width: 700px;
+
+.toolbar-item {
+  margin-right: 10px;
+}
+
+.toolbar {
+  background-color: maroon;
+  color: azure;
   padding: 10px;
-  margin-top: 10px;
 }

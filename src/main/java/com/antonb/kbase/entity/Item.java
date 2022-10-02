@@ -2,6 +2,7 @@ package com.antonb.kbase.entity;
 
 import lombok.Data;
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Table(schema = "kbase",name="item")
@@ -13,4 +14,5 @@ public class Item {
     private Long id;
     private String title;
     private String text;
+    private Timestamp lastupdate;
 }

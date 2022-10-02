@@ -5,6 +5,8 @@ import com.antonb.kbase.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Timestamp;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 @RestController
@@ -28,18 +30,20 @@ public class ItemController {
     public Item update(@PathVariable("id") Item dbItem, @RequestBody Item item) {
         dbItem.setTitle(item.getTitle());
         dbItem.setText(item.getText());
+        dbItem.setLastupdate(Timestamp.from(ZonedDateTime.now().toInstant()));
         itemRepository.save(dbItem);
         return dbItem;
     }
 
     @GetMapping("last")
     public List<Item> getLast10Items() {
-        List<Item> items = itemRepository.findTop10OrderByIdDesc();
+        List<Item> items = itemRepository.findTop10ByTitleContainsOrderByLastupdateDesc("");
         return items;
     }
 
-    @PostMapping("{id}")
+    @PostMapping("new")
     public Item add(@RequestBody Item item) {
+        item.setLastupdate(Timestamp.from(ZonedDateTime.now().toInstant()));
         itemRepository.save(item);
         return item;
     }

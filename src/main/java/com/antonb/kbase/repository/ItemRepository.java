@@ -10,5 +10,5 @@ import java.util.List;
 public interface ItemRepository extends CrudRepository<Item,Long> {
     List<Item> findAllByTitleContainsIgnoreCase(String text);
 
-    List<Item> findTop10OrderByIdDesc();
+    List<Item> findTop10ByTitleContainsOrderByLastupdateDesc(String text);
 }

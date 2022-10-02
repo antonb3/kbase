@@ -14,22 +14,9 @@ export interface Item {
 })
 export class AppComponent implements OnInit {
 
-  searchtext: string = "";
-  items: Array<any> = []
-
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.http.get<Item[]>('http://localhost:9090/item/last')
-      .subscribe(items => {
-        this.items = items
-      })
   }
 
-  search() {
-    this.http.get<Item[]>('http://localhost:9090/item/find?text='+this.searchtext)
-      .subscribe(items => {
-        this.items = items
-      })
-  }
 }
