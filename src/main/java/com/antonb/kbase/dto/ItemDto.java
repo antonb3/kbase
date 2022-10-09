@@ -1,4 +1,4 @@
-package com.antonb.kbase;
+package com.antonb.kbase.dto;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package com.antonb.kbase.controller;
 
-import com.antonb.kbase.ItemDto;
+import com.antonb.kbase.dto.ItemDto;
 import com.antonb.kbase.entity.Item;
 import com.antonb.kbase.entity.ItemTag;
 import com.antonb.kbase.entity.Tag;

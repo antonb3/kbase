@@ -43,3 +43,18 @@ alter table kbase.item_tag
 create unique index item_tag_id_uindex
     on kbase.item_tag (id);
 
+create table kbase."user"
+(
+    id       serial not null
+        constraint user_pk
+            primary key,
+    username varchar(255),
+    password varchar(255)
+);
+
+alter table kbase."user"
+    owner to postgres;
+
+create unique index user_id_uindex
+    on kbase."user" (id);
+
