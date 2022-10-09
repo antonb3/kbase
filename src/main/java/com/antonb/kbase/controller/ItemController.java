@@ -15,7 +15,7 @@ import java.time.ZonedDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/item")
+@RequestMapping("/api/item")
 public class ItemController {
     @Autowired
     private ItemRepository itemRepository;

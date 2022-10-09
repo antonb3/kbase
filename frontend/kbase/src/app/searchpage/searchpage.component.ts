@@ -20,14 +20,14 @@ export class SearchpageComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get<Item[]>('http://localhost:9090/item/last')
+    this.http.get<Item[]>('/api/item/last')
       .subscribe(items => {
         this.items = items
       })
   }
 
   search() {
-    this.http.get<Item[]>('http://localhost:9090/item/find?text='+this.searchtext)
+    this.http.get<Item[]>('/api/item/find?text='+this.searchtext)
       .subscribe(items => {
         this.items = items
       })

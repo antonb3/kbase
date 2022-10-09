@@ -60,7 +60,7 @@ export class NewitemComponent implements OnInit {
       tags: this.tags
     }
 
-    this.http.post('http://localhost:9090/item/new',newItem)
+    this.http.post('/api/item/new',newItem)
       .subscribe(item => {
         this.router.navigate([''])
       })
